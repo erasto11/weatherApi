@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="style/css.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-container">
+        <% if(locals.data){ %>
+        <div class="card">
+             <h1><%= data.list[10].weather[0].main %></h1>
+             <h2><%= data.list[10].weather[0].description %></h2>
+             <p><%= message %></p>
+        </div>
+        <% } %>
+
+        <div class="form">
+            <form action="/submit" method="POST" class = "">
+                <div class="label">
+                    <label>Name The of the City</label><br>
+                </div>
+                <div class="input">
+                    <input class = "Form-Name" type="text" name = "cityName" placeholder="enter the City">
+
+                </div>
+                <div class=" button input ">
+                    <input class = "btn" type="submit" value="Submit">
+                </div>
+
+           </form>
+        </div>
+       
+    </div>
+     
+</body>
+</html>
